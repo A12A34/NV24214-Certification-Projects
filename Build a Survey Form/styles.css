@@ -14,8 +14,8 @@ body {
 }
 
 form {
-    background: #fff;
-    padding: 25px 30px;
+    background-color: #fff;
+    padding: 25px;
     border-radius: 10px;
     width: 320px;
     display: flex;
@@ -28,7 +28,7 @@ label {
     font-weight: bold;
 }
 
-input, select, textarea {
+input {
     margin-bottom: 15px;
     padding: 12px;
     border: 1px solid #ccc;
@@ -38,7 +38,37 @@ input, select, textarea {
     transition: border-color 0.3s;
 }
 
-input:focus, select:focus, textarea:focus {
+select {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+select:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+textarea:focus {
     border-color: #28a745;
     outline: none;
 }
@@ -59,13 +89,20 @@ button:hover {
     background-color: #218838;
 }
 
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"] {
     width: auto;
     margin-right: 8px;
 }
 
-.radio-group, .checkbox-group {
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.radio-group {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
+.checkbox-group {

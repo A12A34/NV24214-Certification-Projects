@@ -3,56 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Technical Documentation</title>
+  <title>Python Basics</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav id="navbar">
-    <header>Docs</header>
-    <a class="nav-link" href="#Introduction">Introduction</a>
-    <a class="nav-link" href="#Getting_Started">Getting Started</a>
-    <a class="nav-link" href="#API_Reference">API Reference</a>
-    <a class="nav-link" href="#Examples">Examples</a>
-    <a class="nav-link" href="#FAQ">FAQ</a>
+    <header>Python Basics</header>
+    <a class="nav-link" href="#Printing_Text">Printing Text</a>
+    <a class="nav-link" href="#Variables_and_Operators">Variables and Operators</a>
+    <a class="nav-link" href="#If_Statement">If Statement</a>
+    <a class="nav-link" href="#While_Loop">While Loop</a>
+    <a class="nav-link" href="#For_Loop">For Loop</a>
   </nav>
 
   <main id="main-doc">
-    <section class="main-section" id="Introduction">
-      <header>Introduction</header>
-      <p>This documentation covers the core ideas.</p>
-      <p>Read to learn more.</p>
-      <code>const x = 1;</code>
-    </section>
-
-    <section class="main-section" id="Getting_Started">
-      <header>Getting Started</header>
-      <p>Install and initialize.</p>
-      <p>Run the starter commands below.</p>
-      <code>npm install</code>
-    </section>
-
-    <section class="main-section" id="API_Reference">
-      <header>API Reference</header>
-      <p>List of endpoints and usage.</p>
+    <section class="main-section" id="Printing_Text">
+      <header>Printing Text</header>
+      <p>The print() function displays output on the screen.</p>
+      <p>You can print text in quotes or numbers and expressions.</p>
+      <code>print("Hello, World!")  # prints text
+print(5 + 3)            # prints result of calculation</code>
       <ul>
-        <li>GET /items</li>
-        <li>POST /items</li>
+        <li>print() shows output on the screen</li>
+        <li>Can print text in quotes or numbers/expressions</li>
       </ul>
-      <code>fetch('/items')</code>
     </section>
 
-    <section class="main-section" id="Examples">
-      <header>Examples</header>
-      <p>Usage examples and patterns.</p>
-      <p>Try the sample below.</p>
-      <code>exampleFunction()</code>
+    <section class="main-section" id="Variables_and_Operators">
+      <header>Variables and Operators</header>
+      <p>Variables store values that you can use and modify in your program.</p>
+      <p>Operators perform mathematical operations on values.</p>
+      <pre>
+      <code>
+x = 10    # assignment
+y = 5
+
+# Arithmetic operators
+print(x + y)  # addition → 15
+print(x - y)  # subtraction → 5
+print(x * y)  # multiplication → 50
+print(x / y)  # division → 2.0
+print(x % y)  # modulus → remainder → 0
+print(x ** 2) # exponent → 100</code>
+</pre>
+      <ul>
+        <li>= assigns value to variable</li>
+        <li>+ - * / % ** are basic math operations</li>
+      </ul>
     </section>
 
-    <section class="main-section" id="FAQ">
-      <header>FAQ</header>
-      <p>Answers to common questions.</p>
-      <p>Contact support if needed.</p>
-      <code>support@example.com</code>
+    <section class="main-section" id="If_Statement">
+      <header>If Statement</header>
+      <p>The if statement is used for decision making and conditional execution.</p>
+      <p>It checks a condition and runs code depending on whether it is True or False.</p>
+      <pre>
+      <code>
+age = 16
+if age >= 18:
+    print("You can vote")
+else:
+    print("You cannot vote")</code>
+    </pre>
+      <ul>
+        <li>if → checks a condition</li>
+        <li>else → runs if condition is False</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="While_Loop">
+      <header>While Loop</header>
+      <p>A while loop repeats a block of code as long as a condition is True.</p>
+      <p>The loop stops when the condition becomes False.</p>
+      <pre>
+      <code>
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+        </code>
+      </pre>
+      <ul>
+        <li>Prints numbers 1 to 5</li>
+        <li>while keeps running until the condition is False</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="For_Loop">
+      <header>For Loop</header>
+      <p>A for loop iterates over a sequence of values.</p>
+      <p>The range() function generates numbers from start to end-1.</p>
+      <pre>
+      <code>
+for i in range(1, 6):
+    print(i)
+    </code>
+        </pre>
+      <ul>
+        <li>Prints numbers 1 to 5</li>
+        <li>range(start, end) generates numbers from start to end-1</li>
+      </ul>
     </section>
   </main>
 </body>
