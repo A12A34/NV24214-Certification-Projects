@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, Arial, sans-serif; padding: 24px; background: #fbfbfb; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+
+/* Attribute selectors for row backgrounds */
+tr[class~="read"] { background-image: linear-gradient(90deg,#e6fffa,#f0fff4); }
+tr[class~="to-read"] { background-image: linear-gradient(90deg,#fff7ed,#fff1f0); }
+tr[class~="in-progress"] { background-image: linear-gradient(90deg,#eef2ff,#f7f8ff); }
+
+/* make span inline-block */
+span { display: inline-block; }
+
+/* status span styling per row type */
+tr[class~="to-read"] .status { border: 1px solid #f1c40f; background-image: linear-gradient(#fff9e6,#fff6d6); padding: 6px 8px; border-radius: 6px; }
+tr[class~="read"] .status { border: 1px solid #16a085; background-image: linear-gradient(#e6fff6,#dffaf0); padding: 6px 8px; border-radius: 6px; }
+tr[class~="in-progress"] .status { border: 1px solid #2563eb; background-image: linear-gradient(#eef6ff,#e8f0ff); padding: 6px 8px; border-radius: 6px; }
+
+/* rate and descendants styling using attribute/class selectors */
+span[class^="rate"], .status { height: 28px; width: 80px; padding: 4px; }
+span[class^="rate"] > span { border: 1px solid #ccc; border-radius: 3px; margin-right: 6px; height: 14px; width: 14px; background-color: #f3f3f3; display: inline-block; }
+
+/* one, two, three gradients */
+span[class*="one"] > span:first-child { background-image: linear-gradient(90deg,#ffd1dc,#ff9fb1); }
+span[class*="two"] > span:nth-child(-n+2) { background-image: linear-gradient(90deg,#ffd9a8,#ffb86b); }
+span[class*="three"] > span { background-image: linear-gradient(90deg,#c7f9cc,#7ee787); }
+
